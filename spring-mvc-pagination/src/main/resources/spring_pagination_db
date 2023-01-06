@@ -1,0 +1,29 @@
+create database spring_pagination_db;
+
+create user 'pgusr'@'localhost' identified by 'pgpwd';
+
+grant all privileges on spring_pagination_db.* to 'pgusr'@'localhost';
+
+create table employee(
+	employee_id int not null auto_increment primary key,
+	employee_fullname varchar(45) not null,
+	employee_position varchar(120) not null,
+	employee_salary int not null
+);
+
+insert into employee(employee_fullname, employee_position, employee_salary) values
+('Daniel', 'Technical Lead', '1300000.00'),
+('Charlotte', 'Technical Lead', '1100000.00'),
+('Rakesh', 'Software Developer', '550000.00'),
+('Jane', 'Senior Software Developer', '970000.00'),
+('Smith', 'UI Developer', '1000000.00'),
+('Bob', 'Associate HR', '80000.00'),
+('Rahul', 'Senior Software Developer', '90000.00'),
+('Rakesh', 'UI Developer', '25000.00'),
+('Udit', 'Junior Developer', '35000.00'),
+('Jai', 'Technical Lead', '45000.00'),
+('Nikhil', 'UI Developer', '55000.00'),
+('Somesh', 'Senior Software Developer', '65000.00'),
+('Rajesh', 'Manager', '75000.00'),
+('Ankit', 'UI Developer', '85000.00'),
+('Ratan', 'Technical Lead', '95000.00');
